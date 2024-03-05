@@ -1,7 +1,9 @@
+import Footer from '../../components/Footer';
 function Accomodation(){
     return (
         <div>
-            <h1> Accomodation </h1>
+            <h1 className="container"> Page Accomodation </h1>
+            <Footer/>
         </div>
     )
 }

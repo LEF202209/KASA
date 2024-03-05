@@ -1,15 +1,14 @@
 /***************************************************************************/
-/**********            pages/Home          index.jsx                 *******/
+/**********            pages/NotFound          index.jsx             *******/
 /***************************************************************************/
 import Footer from '../../components/Footer';
-  
-function Home(){
+function ErrorPage(){
     return (
         <div>
-            <h1 className="container"> Page Home </h1>
+            <h1 className="container"> Page Erreur </h1>
             <Footer/>
         </div>
     )
 }
 
-export default Home
+export default ErrorPage
