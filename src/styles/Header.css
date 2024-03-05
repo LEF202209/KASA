@@ -1,0 +1,48 @@
+header{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin:0 auto;
+    padding-top:40px;
+    height:auto;
+    }
+
+.header_logo{
+       max-width:210.32px;
+       height: 68px;
+    }
+    
+.header_logo_img{
+    width:auto;
+    height:68px;
+    object-fit: cover;
+    }
+
+.nav{
+    width:19.5%;
+    }
+
+.nav_list{
+    display: flex;
+    justify-content: flex-end;
+    height:34px;
+    gap: 57px;
+    font-size: 34px;
+    }
+
+.nav_list_element{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family:var(--font-family);
+    font-size:24px;
+    font-weight:500;
+    color: var(--primary-color);
+    white-space: nowrap; /* Ajout de la propriété */
+    transition: all 0.2s ease-in-out;   
+    }
+
+.nav_active_link {
+    text-decoration:  underline solid var(--primary-color);
+  }
