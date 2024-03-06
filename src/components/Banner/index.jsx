@@ -1,5 +1,5 @@
 /**************************************************************************/
-/**********            components/Banner index.jsx                   *******/
+/**********            components/Banner index.jsx                  *******/
 /**************************************************************************/
 import '../../styles/Banner.css'
 import { useEffect, useState } from 'react';// 

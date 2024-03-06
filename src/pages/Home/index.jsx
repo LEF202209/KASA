@@ -1,16 +1,15 @@
-/***************************************************************************/
-/**********            pages/Home          index.jsx                 *******/
-/***************************************************************************/
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+/****************************************************************/
+/**********            pages/Home      index.jsx          *******/
+/****************************************************************/
 import Gallery from '../../components/Cards';
+import Layout from '../../layout';
   
 function Home(){
     return (
         <div>
-            <Header/>
-            <Gallery/>
-            <Footer/>
+            <Layout>
+                <Gallery/>
+            </Layout>
         </div>
     )
 }
