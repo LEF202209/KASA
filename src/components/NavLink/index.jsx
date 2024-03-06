@@ -12,6 +12,7 @@ export default function Navbar() {
     <nav className="nav">
       <ul className="nav_list">
         <li className="nav_list_element">
+        {/* Page Accueil (Home) */}
           <Link
             to="/"
             className={pathname === '/' ? 'nav_active_link' : ''}
@@ -19,6 +20,7 @@ export default function Navbar() {
             Accueil
           </Link>
         </li>
+        {/* Page A propos (About) */}
         <li className="nav_list_element">
           <Link
             to="/about"

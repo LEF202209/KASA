@@ -1,5 +1,5 @@
 /***************************************************************************/
-/**********            components/Routes index.jsx                 *******/
+/**********            components/Routes index.jsx                   *******/
 /***************************************************************************/
 
 import React from 'react'
@@ -9,10 +9,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Accomodation from '../../pages/Accomodation';
-import Error from '../../pages/NotFound';
+import Error from '../../pages/ErrorPage';
 import GlobalStyle from '../../styles';
 
-// défini les routes, cette fonction est appelé dans src/index.js //
+// Fonction Routing définit les routes, elle est appelée dans src/index.js //
 function Routing() {
     const router = createBrowserRouter([
         { path:"/", element:<Home />, errorElement:<Error /> },

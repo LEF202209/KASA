@@ -1,5 +1,5 @@
 /***************************************************************************/
-/**********            components/Footer index.jsx                 *******/
+/**********            components/Footer index.jsx                   *******/
 /***************************************************************************/
 import imgLogoFooter from '../../assets/logo_footer.png'
 import '../../styles/Footer.css';

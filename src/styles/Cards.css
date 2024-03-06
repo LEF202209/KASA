@@ -1,0 +1,17 @@
+.cards_container{
+    margin-top:63px;
+}
+
+.cards{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color:rgb(247,247,247);
+    margin: 0 auto 45px auto;
+}
+

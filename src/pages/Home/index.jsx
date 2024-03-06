@@ -3,12 +3,13 @@
 /***************************************************************************/
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import Gallery from '../../components/Cards';
   
 function Home(){
     return (
         <div>
             <Header/>
-            <h1 className="container"> Page Home </h1>
+            <Gallery/>
             <Footer/>
         </div>
     )

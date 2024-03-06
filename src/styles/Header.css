@@ -12,7 +12,7 @@ header{
        max-width:210.32px;
        height: 68px;
     }
-    
+
 .header_logo_img{
     width:auto;
     height:68px;
@@ -39,7 +39,7 @@ header{
     font-size:24px;
     font-weight:500;
     color: var(--primary-color);
-    white-space: nowrap; /* Ajout de la propriété */
+    white-space: nowrap; /* ne pas couper "A propos" */
     transition: all 0.2s ease-in-out;   
     }
 
