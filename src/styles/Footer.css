@@ -29,3 +29,14 @@ footer{
     height: 46px;
     max-width:513px;
 }
+
+@media screen and (max-width: 768px)
+ {
+    .footer_text_container{
+        font-size: 12px;
+        line-height: 17.11px;
+    }
+    .footer_logo {
+        margin-bottom:0;
+    }
+  }

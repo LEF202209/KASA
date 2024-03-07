@@ -15,3 +15,24 @@
     margin: 0 auto 45px auto;
 }
 
+@media screen and (max-width: 1278px){
+    .cards_container{
+        margin-top:43px;
+    }
+
+    .cards{
+        gap: 25px; 
+    }      
+}
+@media screen and (max-width: 768px){
+    .cards_container {
+        margin-top:16px;
+    }
+
+    .cards { 
+        width: 100%;
+        padding: 0px 0px 20px 0px;
+        background-color: #FFFFFF;
+        margin-bottom: 60px;
+    }
+}
