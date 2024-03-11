@@ -6,11 +6,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 
-function AppLayout(props) {
+function AppLayout({children}) {
   return (
     <div>
       <Header />
-          {props.children}  
+          {children}  
       <Footer />
     </div>
   );
