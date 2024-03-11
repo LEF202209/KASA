@@ -3,7 +3,7 @@
     margin-right:auto;
     margin-bottom:30px;
     transition: all 0.3s ease;
-    background-color: #F7F7F7; 
+    background-color: var(--secondary-color); 
     border-radius: 10px;
 }
 
@@ -26,6 +26,7 @@
     border-radius: 10px;
     padding:18.08px;
     position : relative;
+    /* collapse_title_container au dessus du collapse_content_container */
     z-index: 20;
 }
 
@@ -50,6 +51,7 @@
     border-radius: 10px;
     margin-top:-10px;
     position : relative;
+    /* collapse_content_container en dessous du collapse_title_container */
     z-index: 10;  
 }
 
@@ -59,7 +61,7 @@
 }
   
 .collapsible_open {
-    background-color : #F7F7F7; 
+    background-color : var(--secondary-color); 
     overflow: hidden;
     padding: 36px 27px 19px 18px;
     color: var(--primary-color);
@@ -84,10 +86,45 @@
     transition: all 0.2s ease-in-out;    
 }
 
-.up_arrow{
+.down_arrow{
+    /* maintenir flèche "down_arrow" dans sa posit° initiale */
     transform: rotate(0deg);
 }
 
-.down_arrow{
+.up_arrow{
+    /* rotat° 180 degrés =>pivoter la flèche qu'elle pointe vers le haut */
     transform: rotate(180deg);
+}
+
+
+
+@media screen and  (max-width:768px){
+	.collapse_container {
+        width:100%;
+        margin-bottom:20px;
+    }
+	
+    .collapse_title_container {
+        height: 30px;
+        padding: 11.51px;
+        border-radius: 5px;
+    }
+
+    .collapse_title_container h3{
+        font-size: 13px;
+        line-height: 18.54px;
+        height: 19px;
+    }
+
+    .collapsible_open {
+        font-size:12px;
+        padding: 24.23px 6.91px 31.42px 11.51px;
+        line-height:17.11px;
+        border-radius: 5px;
+    }
+
+    .arrow{
+        width: 16px;
+        height: 9.14px;
+    }
 }

@@ -10,18 +10,19 @@
     background-size: cover;
     height: 223px;
     padding: 20px;
-    /* à voir avec la mentor */
     opacity:0.7;
     mix-blend-mode: darken;
 }
 
 
 .banner_home{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    /* dégradé linéaire semi-transparent noir avec opacité 0.3 & image accueil */
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), 
 url('../assets/banner_home.jpg');
 }
 
 .banner_about{
+    /* dégradé linéaire semi-transparent noir avec opacité 0.3 & image à propos */
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
 url('../assets/banner_about.jpg');
     margin-bottom:31px;

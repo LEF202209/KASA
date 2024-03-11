@@ -9,7 +9,7 @@ export default function Navbar() {
   const pathname = window.location.pathname;
 
   return (
-    <nav className="nav">
+    <nav className="nav_container">
       <ul className="nav_list">
         <li className="nav_list_element">
         {/* Page Accueil (Home) */}

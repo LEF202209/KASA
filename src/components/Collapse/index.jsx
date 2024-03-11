@@ -12,8 +12,8 @@ export default function Collapse({title, content,collapseDirection}) {
             <div className={`collapse_container ${collapseDirection}`}>
                 <div className={`collapse_title_container ${collapseDirection==='row'?'collapse_title_container_row':''}`} onClick={toggleCollapsible}>
                     <h3 >{title}</h3>
-                    <img onClick={toggleCollapsible}
-                        className={isOpen ? 'arrow down_arrow' : 'arrow up_arrow'} 
+                    <img onClick={toggleCollapsible} 
+                        className={`arrow ${isOpen ? 'up_arrow' : 'down_arrow'}`}
                         src={arrow} 
                         alt="content" 
                     /> 
