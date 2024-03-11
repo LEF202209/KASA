@@ -1,17 +1,23 @@
 /***************************************************************************/
-/**********            pages/NotFound          index.jsx             *******/
+/**********            pages/ErrorPage index.jsx                     *******/
 /***************************************************************************/
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import {Link} from 'react-router-dom';
+import '../../styles/ErrorPage.css';
+import Layout from '../../layout';
 
-function ErrorPage(){
+function Error () {
     return (
-        <div>
-            <Header/>
-            <h1 className="container"> Page Erreur </h1>
-            <Footer/>
+         <div>
+            <Layout>
+                <main className="container error_container">
+                    <h1 className="error_number"> 404 </h1>    
+                    <p className="error_text"> Oups! La page que vous demandez n'existe pas. </p>
+                    <li className="error_return">
+                        <Link to='/'> Retourner sur la page d'accueil</Link>
+                    </li>
+                </main>
+            </Layout>
         </div>
     )
 }
-
-export default ErrorPage
+export default Error
