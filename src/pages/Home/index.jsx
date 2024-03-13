@@ -1,14 +1,14 @@
 /*******************************************************/
 /**********     pages/Home      index.jsx        *******/
 /*******************************************************/
-import Gallery from '../../components/Cards';
+import Cards from '../../components/Cards';
 import Layout from '../../layout';
   
 function Home(){
     return (
         <div>
             <Layout>
-                <Gallery/>
+                <Cards/>
             </Layout>
         </div>
     )
