@@ -5,10 +5,10 @@
 import { Link } from 'react-router-dom'
 import '../../styles/Card.css';
 
-/* affichage d'une card : props  (id, title, cover) */
+/* Affichage d'une card : props  (id, title, cover) */
 export default function Item({id, title, cover}) {
 	return (
-            /* naviguer avec Link dans le Card, l'id dans l'URL */
+            /* Link to pour aller dans la page Logement, l'id dans l'URL */
 			<Link to={`/accomodation/${id}`} className="item_container">
 				<figure>
 					<img src={cover} alt={title} />
