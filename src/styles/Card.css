@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* arrière-plan avec un dégradé linéaire entre deux couleurs*/
+    /* effet d'ombre : arrière-plan avec un dégradé linéaire entre deux couleurs*/
     background-image: linear-gradient(to bottom, var(--color-white-transparent) 50%, var(--color-black-semi-transparent) 100%);
     /* superposit° elts : arrière-plan degradé après l'image & avant le nom de l'appartement */
     z-index: 10;

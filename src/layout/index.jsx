@@ -4,11 +4,12 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import '../../src/styles/Layout.css';
 
 
 function AppLayout({children}) {
   return (
-    <div>
+    <div className="app-container">
       <Header />
           {children}  
       <Footer />

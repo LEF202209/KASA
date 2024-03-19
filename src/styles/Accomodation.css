@@ -133,6 +133,18 @@
     text-align: left;
   }
 
+  .accomodation_collapse{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    width:100%;
+  }
+  
+  .accomodation_collapse_item{
+    height:auto;
+    width:50%;
+  }
+
   
 @media screen and (max-width: 768px)
 {
@@ -212,5 +224,13 @@
   .accomodation_hosts_container_stars{
     gap: 7.5px;
     height: 18px;
+  }
+
+  .accomodation_collapse{
+    flex-direction:column;
+    gap:0px;
+  }
+  .accomodation_collapse_item{
+    width:100%;
   }
 }

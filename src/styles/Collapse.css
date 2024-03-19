@@ -80,6 +80,7 @@
     padding-top: 30px 12px 0 20px;
 }
 
+
 .arrow{
     width: 24px; 
     height:13.71px;
@@ -96,8 +97,6 @@
     transform: rotate(180deg);
 }
 
-
-
 @media screen and  (max-width:768px){
 	.collapse_container {
         width:100%;
@@ -110,11 +109,16 @@
         border-radius: 5px;
     }
 
+    .collapse_title_container_row {
+        height: 29.93px;
+        padding: 11.55px;
+    }
+
     .collapse_title_container h3{
         font-size: 13px;
         line-height: 18.54px;
         height: 19px;
-    }
+    }   
 
     .collapsible_open {
         font-size:12px;
@@ -122,6 +126,10 @@
         line-height:17.11px;
         border-radius: 5px;
     }
+
+    .collapsible_open_row{
+        min-height: auto;
+    }   
 
     .arrow{
         width: 16px;

@@ -10,6 +10,7 @@ import Error from '../ErrorPage';
 import Layout from '../../layout';
 import starEmpty from '../../assets/star_empty.png';
 import starFull from '../../assets/star_full.png';
+import Collapse from '../../components/Collapse';
 import '../../styles/Accomodation.css';
 
 
@@ -33,8 +34,12 @@ export default function Accomodation () {
         if (dataCurrent === undefined) {
             return <Error />
         } 
-          /* rating_user */
+        /* rating_user */
         const rating = dataCurrent.rating
+        /* liste des équipements pour les collapses */
+        const equipment_list = dataCurrent.equipments.map(
+            (equipment, index) => ( <p key={"equip-"+index} >{equipment}</p>)
+        )
         return (
             <div>
                 <Layout>
@@ -78,13 +83,21 @@ export default function Accomodation () {
                                 </div>
                             </div>
                             <div className="accomodation_collapse">
-                                <div className="accomodation_collapse_item"> 
-                                    <span>COLLAPSE 1 </span>
-                                </div>
-                                <div className="accomodation_collapse_item"> 
-                                    <span>COLLAPSE 2 </span>
-                                </div>
-                            </div>
+                        <div className="accomodation_collapse_item"> 
+                            <Collapse 
+                                title ={'Description'} 
+                                content={dataCurrent.description } 
+                                collapseDirection={"row"}
+                            />
+                        </div>
+                        <div className="accomodation_collapse_item"> 
+                            <Collapse 
+                                title="Equipements" 
+                                content={equipment_list}
+                                collapseDirection={"row"} 
+                            />
+                        </div>
+                    </div>
                         </section>
                     </main>
                 </Layout>
