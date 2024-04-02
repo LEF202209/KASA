@@ -8,6 +8,7 @@ import '../../styles/About.css';
 
 
 function About() {
+	/* données à afficher dans les collapses */
     const datas = [
 		{
 			"id": "1",
@@ -36,13 +37,14 @@ function About() {
 				<main className= 'container about_container'>
 					<Banner/>
 					<section>
+						{/* Affiche les collapses page About */}
 						{datas.map(data => (
 							<Collapse 
-							key={data.id}
-							id={data.id}
-							title={data.title}
-							content={data.content}
-							collapseDirection="column"
+								key={data.id}
+								id={data.id}
+								title={data.title}
+								content={data.content}
+								collapseDirection="column"
 							/>
 						))}
 					</section>

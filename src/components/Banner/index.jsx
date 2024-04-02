@@ -5,11 +5,11 @@ import '../../styles/Banner.css'
 import { useEffect, useState } from 'react';// 
 
 export default function Banner() {
-    /* variable routeHome( yes/No ) */
+    /* Variable routeHome qui prend les valeurs vrai ou faux ) */
 	const [routeHome, setRouteHome] = useState(true);
 	/* UseEffect permettant de gérer le changement de l'URL */
 	useEffect(() => {
-		/* RouteHome sera à true si l'URL est '/' */
+		/* RouteHome sera à true si l'URL est '/' (route page d'accueil) */
 		const handleLocationChange = () =>{
         /* window.location.pathname contient l'URL de la fenêtre courante */
 		(window.location.pathname === '/')?setRouteHome(true):setRouteHome(false);}
@@ -24,9 +24,9 @@ export default function Banner() {
 		}, []);
 	
 	return (
-        /* affichage banner_home ou banner_about selon la valeur de routeHome */
+        /* Affiche banner_home ou banner_about selon la valeur de routeHome */
 		<section className={`banner ${routeHome?'banner_home':'banner_about'}`}>
-            {/* express° ternaire : affichage h1 seulement si routeHome à oui */}
+            {/* express° ternaire : affichage h1 seulement si routeHome à vrai */}
 			{routeHome? <h1>Chez vous, partout et ailleurs</h1> : null}
 		</section>
 	)

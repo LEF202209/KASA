@@ -6,7 +6,9 @@ import '../../styles/Collapse.css';
 import arrow from '../../assets/down_arrow.png';
 
 export default function Collapse({title, content,collapseDirection}) {
+    /* Variable isOpen initialisée à false */
     const [isOpen, setIsOpen] = useState(false);
+    /* Fonction toggleCollapsible pour inverser la valeur de isOpen */
     const toggleCollapsible = () => {setIsOpen(!isOpen);};
     return (
             <div className={`collapse_container ${collapseDirection}`}>

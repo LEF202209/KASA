@@ -5,7 +5,7 @@
 import { Link } from 'react-router-dom'
 import '../../styles/Card.css';
 
-/* Affichage d'une card : props  (id, title, cover) */
+/* Affichage d'une card qui reçoit props (id, title, cover) */
 export default function Item({id, title, cover}) {
 	return (
             /* Link to pour aller dans la page Logement, l'id dans l'URL */

@@ -12,6 +12,7 @@ function Cards() {
   return (
     <main className='container cards_container'>
       <Banner/>
+      {/* Affiche la liste des cartes Logement */}
       <section className="cards" >
         {datas.map(data => (
           <Card 

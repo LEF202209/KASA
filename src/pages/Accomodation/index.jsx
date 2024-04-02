@@ -1,7 +1,6 @@
 /***************************************************************************/
 /**********            pages/Accomodation index.jsx                  *******/
 /***************************************************************************/
-
 import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import Carousel from '../../components/Slideshow';
@@ -14,44 +13,44 @@ import Collapse from '../../components/Collapse';
 import '../../styles/Accomodation.css';
 
 
-
 export default function Accomodation () {
     const [imageViews, setImageViews] = useState([]);
     /* extraction de la valeur du paramètre id de l'URL actuelle */
     const {idAccomodation} = useParams();
-    /* récupérer que la data qui a identifiant= contenu variable idAccomodation grace à find */
-    /* stocke le résultat dans la variable dataCurrent */
-    const dataCurrent = datas.find(data => data.id === idAccomodation)   
-    /*utilisation "useEffect"  pour mise à jour */
-    /* de la variable d'état imageViews */
-    /* à chq chgt de la valeur idAccomodation ou de la dataCurrent. */
-    /* Si record trouvé dans dataCurrent */
-    /*nvelle valeur imagesView = ppté pictures de dataCurrent */
-    useEffect(() => {if (dataCurrent !== undefined) 
-         {setImageViews(dataCurrent.pictures);}},
-		[idAccomodation,dataCurrent]);
-		/* si id n'existe pas renvoyer à la page d'erreur 404 ***/
-        if (dataCurrent === undefined) {
+    /* récupére le record qui a le même id dans le fichier json */
+    /* et stocke le résultat dans la variable recordCurrent */
+    const recordCurrent = datas.find(data => data.id === idAccomodation)   
+    /* utilisation "useEffect"  maj variable d'état imageViews */
+    /* à chq chgt de la valeur idAccomodation ou de la recordCurrent. */
+    /* Si record trouvé dans recordCurrent */
+    /* nvelle valeur imagesView = ppté pictures de recordCurrent */
+    useEffect(() => {if (recordCurrent !== undefined) 
+         {setImageViews(recordCurrent.pictures);}},
+		[idAccomodation,recordCurrent]);
+		/* si Record non trouvé, renvoyer la page d'erreur 404 ***/
+        if (recordCurrent === undefined) {
             return <Error />
         } 
-        /* rating_user */
-        const rating = dataCurrent.rating
-        /* liste des équipements pour les collapses */
-        const equipment_list = dataCurrent.equipments.map(
+        /* Nombre d'étoiles du logement sélectionné */
+        const rating = recordCurrent.rating
+        /* Liste des équipements du logement pour le collapse */
+        const equipment_list = recordCurrent.equipments.map(
             (equipment, index) => ( <p key={"equip-"+index} >{equipment}</p>)
         )
         return (
             <div>
                 <Layout>
                     <main className="container accomodation_container">
+						{/* Carrousel d'images */}
                         <Carousel views={imageViews}/>
                         <section className="accomodation">
                             <div className="accomodation_infos">
+								{/* Affiche le titre , l'emplacement et tags */}
                                 <div className ="accomodation_infos_title_location">
-                                    <div className ="accomodation_infos_title">{dataCurrent.title}</div>
-                                    <h1 className ="accomodation_infos_location">{dataCurrent.location}</h1>
+                                    <div className ="accomodation_infos_title">{recordCurrent.title}</div>
+                                    <h1 className ="accomodation_infos_location">{recordCurrent.location}</h1>
                                     <div className ="accomodation_infos_tag">
-                                        {dataCurrent.tags.map((tag, index) => (
+                                        {recordCurrent.tags.map((tag, index) => (
                                         <div key={"tag-"+index} className="accomodation_infos_tag_button_container">
                                                 <span className = "accomodation_infos_tag_button">{tag}</span>
                                         </div>
@@ -60,13 +59,15 @@ export default function Accomodation () {
                                     </div>
                                 </div>
                                 <div className="accomodation_hosts">
+									{/* Affiche photo, nom, prénom de l'hôte */}
                                     <div className="accomodation_hosts_details">
-                                        <img src={dataCurrent.host.picture} alt={dataCurrent.host.name}
+                                        <img src={recordCurrent.host.picture} alt={recordCurrent.host.name}
                                         className="accomodation_hosts_profile_picture" />
                                         <div>
-                                            <p className="accomodation_hosts_profile_name">{dataCurrent.host.name} </p>    
+                                            <p className="accomodation_hosts_profile_name">{recordCurrent.host.name} </p>    
                                         </div>
                                     </div>
+									{/* Affiche les étoiles avec les couleurs */}
                                     <div className="accomodation_hosts_container_stars">
                                         {(() => {
                                             const starElements = [];
@@ -83,21 +84,23 @@ export default function Accomodation () {
                                 </div>
                             </div>
                             <div className="accomodation_collapse">
-                        <div className="accomodation_collapse_item"> 
-                            <Collapse 
-                                title ={'Description'} 
-                                content={dataCurrent.description } 
-                                collapseDirection={"row"}
-                            />
-                        </div>
-                        <div className="accomodation_collapse_item"> 
-                            <Collapse 
-                                title="Equipements" 
-                                content={equipment_list}
-                                collapseDirection={"row"} 
-                            />
-                        </div>
-                    </div>
+							    {/* Affiche le collapse description */}
+                                <div className="accomodation_collapse_item"> 
+                                    <Collapse 
+                                        title ={'Description'} 
+                                        content={recordCurrent.description } 
+                                        collapseDirection={"row"}
+                                    />
+                                </div>
+						        {/* Affiche le collapse équipements */}
+                                <div className="accomodation_collapse_item"> 
+                                    <Collapse 
+                                        title="Equipements" 
+                                        content={equipment_list}
+                                        collapseDirection={"row"} 
+                                    />
+                                </div>
+                            </div>
                         </section>
                     </main>
                 </Layout>
