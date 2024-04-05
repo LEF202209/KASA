@@ -10,7 +10,7 @@ import Layout from '../../layout';
 import starEmpty from '../../assets/star_empty.png';
 import starFull from '../../assets/star_full.png';
 import Collapse from '../../components/Collapse';
-import '../../styles/Accomodation.css';
+import '../../sass/pages/Accomodation.scss';
 
 
 export default function Accomodation () {

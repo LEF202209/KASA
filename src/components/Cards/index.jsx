@@ -5,8 +5,7 @@ import React from 'react';
 import datas from '../../datas/datas.js';
 import Card from '../Card';
 import Banner from '../../components/Banner';
-import '../../styles/Cards.css';
-
+import '../../sass/components/Cards.scss';
 
 function Cards() {
   return (

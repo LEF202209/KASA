@@ -2,7 +2,7 @@
 /**********            components/Footer index.jsx                   *******/
 /***************************************************************************/
 import imgLogoFooter from '../../assets/logo_footer.png'
-import '../../styles/Footer.css';
+import '../../sass/layouts/Footer.scss';
 
 export default function Footer (){
     return (

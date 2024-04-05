@@ -1,0 +1,149 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
+
+.column 
+    {
+        width:82.5%;
+    }
+
+.row
+    {
+        width:100%;
+    }
+    
+.collapse_container {
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom:30px;
+    transition: all 0.3s ease;
+    background-color: $secondary-color; 
+    border-radius: 10px;
+    @include m.mobile
+    {
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    &_title
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 47px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        padding:18.08px;
+        position : relative;
+        /* collapse_title_container au dessus du collapse_content_container */
+        z-index: 20;
+        @include m.mobile
+        {
+            height: 30px;
+            padding: 11.51px;
+            border-radius: 5px;
+        }
+    }
+
+    &_title h3 
+    {
+        color : $background-color;
+        font-size:24px;
+        font-weight: 500;
+        width:100px;
+        height:34px;
+        line-height: 34.22px;
+        font-family : $font-family;
+        @include m.mobile
+        {
+            font-size: 13px;
+            line-height: 18.54px;
+            height: 19px;
+        }    
+    }
+    &_title_row
+    {
+        @include m.mobile {
+            height: 29.93px;
+            padding: 11.55px;
+        }
+    }
+
+    &_title_row h3
+    {
+        font-size: 18px;
+        max-width: 124px;
+        line-height: 25.67px; 
+        height: 26px;
+    }
+}
+
+.collapse_container_content{   
+    border-radius: 10px;
+    margin-top:-10px;
+    position : relative;
+    /* collapse_content_container en dessous du collapse_title_container */
+    z-index: 10;  
+}
+
+.collapsible_close {
+    display : none; 
+}
+  
+.collapsible_open {
+    background-color : $secondary-color; 
+    overflow: hidden;
+    padding: 36px 27px 19px 18px;
+    color: $primary-color;
+    font-size:24px;
+    border-radius:10px;
+    font-family : $font-family;    
+    font-weight: 400;
+    line-height: 34.22px;
+    @include m.mobile
+    {
+        font-size:12px;
+        padding: 24.23px 6.91px 31.42px 11.51px;
+        line-height:17.11px;
+        border-radius: 5px;
+    }
+
+    &_row
+    {
+        min-height: 309px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25.67px;
+        padding-top: 30px 12px 0 20px;
+        @include m.mobile
+        {
+            min-height: auto;
+        } 
+    }
+}
+
+.arrow
+    {
+        width: 24px; 
+        height:13.71px;
+        transition: all 0.2s ease-in-out;
+        @include m.mobile
+        {
+            width: 16px;
+            height: 9.14px;
+        }
+    }    
+
+.arrow_down
+    {
+      /* maintenir flèche "down_arrow" dans sa posit° initiale */
+      transform: rotate(0deg);
+    }
+
+.arrow_up
+    {
+      /* rotat° 180 degrés => pivoter la flèche qu'elle pointe vers le haut */
+     transform: rotate(180deg);
+    }
+

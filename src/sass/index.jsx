@@ -2,11 +2,11 @@
 /******************   src/styles/index.jsx          **********************/
 /**************************************************************************/
 import React from 'react';
-import styles from './Global.css';
+import  '../sass/Global.scss';
 
-/* appliquer le css de l'attribut container ds Global.css à ts les enfants */
+/* appliquer les css de Global.css à ts les enfants */
 const GlobalStyle = ({ children }) => (
-  <div className={styles.container}>
+  <div>
     {children}
   </div>
 );

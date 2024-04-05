@@ -4,7 +4,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../../src/styles/Layout.css';
+import '../sass/layouts/Layout.scss';
 
 /* Composant AppLayout accepte props enfant */
 function AppLayout({children}) {

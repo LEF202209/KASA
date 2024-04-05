@@ -3,7 +3,8 @@
 /**************************************************************************/
 
 import { Link } from 'react-router-dom'
-import '../../styles/Card.css';
+import '../../sass/components/Card.scss';
+
 
 /* Affichage d'une card qui reçoit props (id, title, cover) */
 export default function Item({id, title, cover}) {

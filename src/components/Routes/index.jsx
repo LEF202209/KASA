@@ -10,7 +10,7 @@ import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Accomodation from '../../pages/Accomodation';
 import Error from '../../pages/ErrorPage';
-import GlobalStyle from '../../styles';
+import GlobalStyle from '../../sass';
 
 // Fonction Routing définit les routes, elle est appelée dans src/index.js //
 function Routing() {
@@ -30,5 +30,3 @@ function Routing() {
 }
 
 export default Routing
-
-

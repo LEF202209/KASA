@@ -1,0 +1,229 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
+.accomodation{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include m.mobile{
+    gap:10px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    margin-top:20px;
+    @include m.mobile
+    {
+        margin-top:15px;
+    }
+  }
+}
+  
+.accomodation_infos{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  @include m.mobile {
+      flex-direction:column;
+      gap:10px;
+  }
+
+  &_title 
+  {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51px;
+    min-height: 51px;
+    color: $primary-color;
+    max-width:635px;
+    @include m.mobile 
+    {
+      align-items:center;
+      max-height: 46px;
+      min-height:32px;
+      font-size:18px;
+      line-height:25.67px;
+    }
+}
+   
+  &_title_location{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    width: 100%;
+    @include m.mobile {
+      margin-bottom:10px;
+      margin-top: 0px;
+    }
+  }
+  
+  &_location {
+    color:$primary-color; 
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px; 
+    margin-bottom:20px; 
+    @include m.mobile
+    { 
+      height:22px;
+      font-size:14px;
+      line-height:19.96px;
+      margin-bottom:10px;
+    }
+  }
+  
+  &_tag {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:10px;
+  }
+
+  &_tag_button 
+  {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: $background-color;
+    text-align:center;
+    @include m.mobile {
+      font-size: 10px;
+      line-height: 14.26px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_tag_button_container
+  {
+    @include m.flex(row,center,center);
+    background-color: $primary-color;
+    min-height: 25px;
+    border-radius: 10px;
+    min-width: 115px;
+    line-height: 20px;
+    padding-left:10px;
+    padding-right:10px;
+    @include m.mobile
+    {
+      height: 18px;
+      width: 84px;
+      border-radius:5px;
+    }
+  }
+}
+    
+.accomodation_hosts{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:0;
+   @include m.mobile
+    {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items:center;
+      width: 100%;
+      margin-bottom:10px;
+    }
+  
+    &_profile_picture{
+      border-radius:50%;
+      height:64px;
+      width:64px;
+      @include m.mobile 
+      {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  
+    &_profile_name{
+      @include m.flex(row,center,flex-end);
+      height: 52px;
+      width: 93px;
+      font-size: 18px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 500;
+      text-align: right;
+      line-height: 25.67px;
+      color: $primary-color;
+      @include m.mobile 
+      {
+        height: 33px;
+        width:93px;
+        font-size: 12px;
+        line-height:17.11px;
+      }
+    }
+  
+    &_details{
+      @include m.flex(row-reverse,center,center);
+      align-content: center;
+      gap: 10px;
+      margin-bottom:20px;
+      @include m.mobile 
+      {
+        width: 135.5px;
+        margin-bottom: 0;
+      }
+    }
+    
+    &_container_stars{
+      display:flex;
+      justify-content: flex-end;
+      gap:10px;
+      @include m.mobile
+      {
+        gap: 7.5px;
+        height: 18px;
+      }
+    }
+  
+    &_stars{
+      height: 24px;
+      width: 24.75px;
+      @include m.mobile
+      {
+        height: 13px;
+        width: 13.41px;
+      }
+    }
+  }
+
+  .accomodation_collapse{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    width:100%;
+    @include m.mobile
+    {
+      flex-direction:column;
+      gap:0px;
+    }
+  
+    &_item{
+      height:auto;
+      width:50%;
+      @include m.mobile
+      {
+        width:100%;
+      }
+    }
+  }
+
+  .description_content
+  {
+    font-size:18px;
+    text-align: left;
+  }

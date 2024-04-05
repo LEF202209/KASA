@@ -1,7 +1,7 @@
 /**************************************************************************/
 /**********            components/Banner index.jsx                  *******/
 /**************************************************************************/
-import '../../styles/Banner.css'
+import '../../sass/components/Banner.scss';
 import { useEffect, useState } from 'react';// 
 
 export default function Banner() {

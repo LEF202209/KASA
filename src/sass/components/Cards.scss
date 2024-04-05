@@ -1,6 +1,6 @@
-.cards_container{
-    margin-top:63px;
-}
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
 
 .cards{
     display:flex;
@@ -11,28 +11,29 @@
     gap: 50px;
     padding: 50px;
     border-radius: 25px;
-    background-color:var(--background-cards);
+    background-color:$background-cards;
     margin: 0 auto 45px auto;
-}
-
-@media screen and (max-width: 1278px){
-    .cards_container{
-        margin-top:43px;
-    }
-
-    .cards{
+    @media screen and (max-width: 1278px)
+    {
         gap: 25px; 
-    }      
-}
-@media screen and (max-width: 768px){
-    .cards_container {
-        margin-top:16px;
     }
-
-    .cards { 
+    @include m.mobile 
+    {
         width: 100%;
         padding: 0px 0px 20px 0px;
         background-color: #FFFFFF;
         margin-bottom: 60px;
+    }
+
+    &_container{
+    margin-top:63px;
+    @media screen and (max-width: 1278px)
+    {
+        margin-top:43px;
+    }
+    @include m.mobile
+    {
+        margin-top:16px;
+    }
     }
 }

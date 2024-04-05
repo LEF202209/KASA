@@ -2,7 +2,7 @@
 /**********            pages/ErrorPage index.jsx                     *******/
 /***************************************************************************/
 import {Link} from 'react-router-dom';
-import '../../styles/ErrorPage.css';
+import '../../sass/pages/ErrorPage.scss';
 import Layout from '../../layout';
 
 function Error () {

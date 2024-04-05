@@ -1,0 +1,58 @@
+/**************************************************/
+/***  /components/banner/banner.scss         ******/
+/**************************************************/
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
+
+.banner{
+    @include m.flex(row,center,center);
+    position: relative;
+    border-radius: 25px;
+    margin: 0px auto 43px auto;
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    padding: 20px;
+    opacity:0.7;
+    mix-blend-mode: darken;
+    @include m.mobile
+    {
+        justify-content: flex-start;
+        margin:0 auto 22px auto;
+        border-radius:10px;
+    }
+
+	&_home{
+		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image accueil */
+		background-image: linear-gradient( rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), 
+	url('../../assets/banner_home.jpg');
+        @include m.mobile
+        {
+			height: 111px;
+		}
+    }
+
+	&_about{
+		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image à propos */
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+	url('../../assets/banner_about.jpg');
+		margin-bottom:31px;
+        @include m.mobile
+        {
+            border-radius: 10px;
+            margin-bottom:19px;
+        }
+	}
+
+	h1{
+		color: $background-color;
+		font-size: 48px;   
+		font-weight: 500;
+        @include m.mobile
+        {
+            font-size: 24px;
+            max-width:217px;   
+        }
+	}
+}

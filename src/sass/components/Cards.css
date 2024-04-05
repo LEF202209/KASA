@@ -1,0 +1,45 @@
+/**************************************************/
+/***  /saas/base/_variables.scss             ******/
+/**************************************************/
+/* variables globales */
+/**************************************************/
+/***  /saas/base/_mixins.scss                ******/
+/**************************************************/
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  margin: 0 auto 45px auto;
+}
+@media screen and (max-width: 1278px) {
+  .cards {
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards {
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    background-color: #FFFFFF;
+    margin-bottom: 60px;
+  }
+}
+.cards_container {
+  margin-top: 63px;
+}
+@media screen and (max-width: 1278px) {
+  .cards_container {
+    margin-top: 43px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards_container {
+    margin-top: 16px;
+  }
+}/*# sourceMappingURL=Cards.css.map */

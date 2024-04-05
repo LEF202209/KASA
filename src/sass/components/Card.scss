@@ -1,18 +1,30 @@
-.item_container {
-    position: relative;
-    width: 29.9%;
-    height: 340px;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
-  }
+@use "../utils/variables" as *;
+@use "../utils/mixins" as m;
 
-  .item_container figure{
+.item_container {
+  position: relative;
+  width: 29.9%;
+  height: 340px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  @media screen and (max-width: 1278px) 
+  {
+      width: 47%;
+  }
+  @include m.mobile
+  {
+      width: 100%;
+      height: 255px;
+  }
+  
+
+  & figure{
     height:100%;
   }
   
-  .item_container::after {
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -20,33 +32,33 @@
     width: 100%;
     height: 100%;
     /* effet d'ombre : arrière-plan avec un dégradé linéaire entre deux couleurs*/
-    background-image: linear-gradient(to bottom, var(--color-white-transparent) 50%, var(--color-black-semi-transparent) 100%);
+    background-image: linear-gradient(to bottom, $color-white-transparent 50%, $color-black-semi-transparent 100%);
     /* superposit° elts : arrière-plan degradé après l'image & avant le nom de l'appartement */
     z-index: 10;
 }
   
-  .item_container:hover {
+  &:hover {
     box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
   
-  .item_container:hover img {
+  &:hover img {
     transform: scale(1.1);
   }
+}
   
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease-in-out;
   }
   
-  .item_name_container {
+.item_name_container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     max-width: 300px;
-    color: var(--background-color);
+    color: $background-color;
     /* nom logement en position absolute, item_container en position relative */
     position: absolute;
     height: 52px;
@@ -55,30 +67,17 @@
     right: 20px;
     /* superposit° élts : nom du logement affiché sur l arrière-plan degradé en z-index:10 */
     z-index: 20;
-  }
-  
-  .item_name_container h2 {
-    font-size: 18px;
-    line-height: 25.67px;
-    font-weight: 500;
-  }
-
-  @media screen and (max-width: 1278px) {
-    .item_container {
-      width: 47%;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .item_container {
-      width: 100%;
-      height: 255px;
-    }
-  
-    .item_name_container {
+    @include m.mobile
+    {
       max-width: 295.5px;
       bottom: 15px;
       left: 19.71px;
       right: 19.7px;
     }
+  
+  & h2 {
+    font-size: 18px;
+    line-height: 25.67px;
+    font-weight: 500;
   }
+}

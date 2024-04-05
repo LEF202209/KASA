@@ -4,7 +4,7 @@
 import Layout from '../../layout'
 import Banner from '../../components/Banner';
 import Collapse from '../../components/Collapse';
-import '../../styles/About.css';
+import '../../sass/pages/About.scss';
 
 
 function About() {

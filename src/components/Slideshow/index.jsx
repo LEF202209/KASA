@@ -4,7 +4,7 @@
 import  { useState, useEffect } from 'react';
 import arrowPrev  from '../../assets/Arrow_back.png';
 import arrowNext from '../../assets/Arrow_forward.png';
-import '../../styles/Slideshow.css';
+import '../../sass/components/Slideshow.scss';
 
 function  Slideshow ({ views })  {
     /* variable currentIndex=Index en cours, initialisée à 0<=>1ère image */
