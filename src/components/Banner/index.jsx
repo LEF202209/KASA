@@ -27,7 +27,7 @@ export default function Banner() {
 	return (
         /* Affiche banner_home ou banner_about selon la valeur de routeHome */
 		<section className={`banner ${routeHome?'banner_home':'banner_about'}`}>
-            {/* express° ternaire : affichage h1 seulement si routeHome à vrai */}
+            {/* opérateur ternaire : affichage h1 seulement si routeHome à vrai */}
 			{routeHome? <h1>Chez vous, partout et ailleurs</h1> : null}
 		</section>
 	)

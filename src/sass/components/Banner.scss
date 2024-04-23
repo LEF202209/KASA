@@ -1,5 +1,5 @@
 /**************************************************/
-/***  /components/banner/banner.scss         ******/
+/***  sass/components/Banner.scss            ******/
 /**************************************************/
 
 @use "../utils/variables" as *;
@@ -24,7 +24,7 @@
     }
 
 	&_home{
-		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image accueil */
+		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image page accueil */
 		background-image: linear-gradient( rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), 
 	url('../../assets/banner_home.jpg');
         @include m.mobile
@@ -34,7 +34,7 @@
     }
 
 	&_about{
-		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image à propos */
+		/* dégradé linéaire semi-transparent noir avec opacité 0.3 & image page à propos */
 		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
 	url('../../assets/banner_about.jpg');
 		margin-bottom:31px;
