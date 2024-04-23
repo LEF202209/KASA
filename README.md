@@ -20,6 +20,6 @@ Démarrer le serveur avec la commande `npm start`
 ### Tester le projet :
 
 ```terminal
-git clone https://github.com/LEF202209/P7-KASA.git
+git clone https://github.com/LEF202209/KASA.git
 ```
 
