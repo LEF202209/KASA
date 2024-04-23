@@ -1,12 +1,13 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as m;
 
-
+/* collapse page About */
 .column 
     {
         width:82.5%;
     }
 
+/* collapse page Accomodation */
 .row
     {
         width:100%;

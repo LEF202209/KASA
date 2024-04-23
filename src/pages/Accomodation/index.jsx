@@ -67,17 +67,22 @@ export default function Accomodation () {
                                             <p className="accomodation_hosts_profile_name">{recordCurrent.host.name} </p>    
                                         </div>
                                     </div>
-									{/* Affiche les étoiles avec les couleurs */}
+                                    {/* Affiche les étoiles avec les couleurs */}
                                     <div className="accomodation_hosts_container_stars">
                                         {(() => {
                                             const starElements = [];
-                                            for (let index = 0; index < 5; index++) {
-                                                const starRank = index + 1;
-                                                starElements.push(
-                                                <img key={"star-"+index} src={starRank <= rating ? starFull : starEmpty} alt="star" className="accomodation_host_stars" />
+                                            const starIndex = [0,1,2,3,4];
+                                            starIndex.forEach((index) => {
+                                            const starRank = index + 1;
+                                            starElements.push(
+                                                <img
+                                                key={"star-" + index}
+                                                src={starRank <= rating ? starFull : starEmpty}
+                                                alt="star"
+                                                className="accomodation_host_stars"
+                                                />
                                             );
-                                            }
-                                            console.log(starElements);
+                                            });
                                             return starElements;
                                         })()}
                                     </div>

@@ -15,17 +15,6 @@ function  Slideshow ({ views })  {
     useEffect(() => {if (views.length>0)
         {setCurrentPageNumber(`${currentIndex+1}/${views.length}`);}},
         [currentIndex,views.length]);
-
-    /* Fonction calcul index courant pour view suivante */
-    const goToNextView = () => {
-        /* Incrémente de 1 l'index en cours */
-        setCurrentIndex (currentIndex + 1);
-        /* Si on est à la dernière page => revenir à la 1ère image */
-        if (currentIndex >= views.length-1) {
-            /* index première image  = 0 */
-            setCurrentIndex (0);
-        }
-    };
   
     /* Fonction calcul index courant  pour view précédente */
     const goToPreviousView = () => {
@@ -35,6 +24,17 @@ function  Slideshow ({ views })  {
         if (currentIndex <= 0) {
             /* Index dernière image = nombre total images -1 */
             setCurrentIndex (views.length - 1);
+        }
+    };
+
+    /* Fonction calcul index courant pour view suivante */
+    const goToNextView = () => {
+        /* Incrémente de 1 l'index en cours */
+        setCurrentIndex (currentIndex + 1);
+        /* Si on est à la dernière page => revenir à la 1ère image */
+        if (currentIndex >= views.length-1) {
+            /* index première image  = 0 */
+            setCurrentIndex (0);
         }
     };
 

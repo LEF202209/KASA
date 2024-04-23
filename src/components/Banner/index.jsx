@@ -2,7 +2,7 @@
 /**********            components/Banner index.jsx                  *******/
 /**************************************************************************/
 import '../../sass/components/Banner.scss';
-import { useEffect, useState } from 'react';// 
+import { useEffect, useState } from 'react';
 
 export default function Banner() {
     /* Variable routeHome qui prend les valeurs vrai ou faux ) */
@@ -12,6 +12,7 @@ export default function Banner() {
 		/* RouteHome sera à true si l'URL est '/' (route page d'accueil) */
 		const handleLocationChange = () =>{
         /* window.location.pathname contient l'URL de la fenêtre courante */
+		/* Si URL courante = Page d'accueil => routeHome est à true */
 		(window.location.pathname === '/')?setRouteHome(true):setRouteHome(false);}
 		/* Appel initial pour gérer la valeur initiale */
 		handleLocationChange(); 

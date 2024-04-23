@@ -101,7 +101,7 @@
     }
     &:last-child {
       margin-right: 0;
-    }
+    } 
   }
 
   &_tag_button_container
@@ -119,6 +119,9 @@
       height: 18px;
       width: 84px;
       border-radius:5px;
+    }
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0);
     }
   }
 }

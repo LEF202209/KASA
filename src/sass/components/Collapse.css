@@ -6,10 +6,12 @@
 /**************************************************/
 /***  /saas/base/_mixins.scss                ******/
 /**************************************************/
+/* collapse page About */
 .column {
   width: 82.5%;
 }
 
+/* collapse page Accomodation */
 .row {
   width: 100%;
 }

@@ -13,8 +13,9 @@ function Cards() {
       <Banner/>
       {/* Affiche la liste des cartes Logement */}
       <section className="cards" >
+        {/* Parcours les éléments du tableau */}
         {datas.map(data => (
-          <Card 
+          <Card
             key={data.id}
             id={data.id}
             title={data.title}
